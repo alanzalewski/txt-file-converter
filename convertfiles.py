@@ -1,4 +1,5 @@
-'''This program opens a window that allows the user to select txt files and convert them to either xlsx or csv format, outputting them to the same file.'''
+'''This program opens a window that allows the user to select txt files and convert 
+them to either xlsx or csv format, outputting them to the same directory.'''
 
 import tkinter as tk
 from tkinter import filedialog
