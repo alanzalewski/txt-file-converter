@@ -28,9 +28,9 @@ def convertToXlsx():
                     row[-1] = row[-1][0:-1]
                 r+=1
         
-            # writing to xlsx file, leaving only sampling frequency in header
-            df = pd.DataFrame(rawdata[4:])
-            df.loc[3:len(rawdata),0:8] = df.loc[3:len(rawdata),0:8].astype(float)
+            # writing to xlsx file
+            df = pd.DataFrame(rawdata)
+            df.loc[7:len(rawdata),0:8] = df.loc[7:len(rawdata),0:8].astype(float)
             excelfile = pd.ExcelWriter(export_file_path, engine='xlsxwriter')
             df.to_excel(excelfile, sheet_name='Sheet1', index=False, header=False)
             excelfile.save()
@@ -53,9 +53,9 @@ def convertToCsv():
                     row[-1] = row[-1][0:-1]
                 r+=1
             
-            # writing to csv file, leaving only sampling frequency in header
-            df = pd.DataFrame(rawdata[4:])
-            df.loc[3:len(rawdata),0:8] = df.loc[3:len(rawdata),0:8].astype(float)
+            # writing to csv file
+            df = pd.DataFrame(rawdata)
+            df.loc[7:len(rawdata),0:8] = df.loc[7:len(rawdata),0:8].astype(float)
             df.to_csv(export_file_path, index=False, header=False)
     
 saveAsButtonXlsx = tk.Button(text='Select files to convert to xlsx', command=convertToXlsx, bg='gainsboro', fg='black', font=('helvetica',10))
