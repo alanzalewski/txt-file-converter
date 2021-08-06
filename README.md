@@ -1,7 +1,7 @@
 # txt-file-converter
-### Script and instructions for converting a FluxMed .txt file to either .csv or .xlsx format.
+### Code and instructions for converting a FluxMed .txt file to either .csv or .xlsx format.
 
-The script can be launched command line with the following prompt (the working directory must be the same as the director the script is located in though):
+The code can be launched command line with the following prompt (the working directory must be the same as the director the code is located in though):
 ```sh
 python convertfiles.py
 ```
